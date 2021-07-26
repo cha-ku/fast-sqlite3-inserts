@@ -70,6 +70,6 @@ int main() {
     auto naivedb = open_database("cppnaive.db");
     create_table(naivedb.get());
     execute(naivedb.get(), "PRAGMA journal_mode = WAL;");
-    faker(naivedb.get(), 10'000'000);
+    faker(naivedb.get(), 1'000'000);
     return 0;
 }

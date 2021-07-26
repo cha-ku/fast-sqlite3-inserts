@@ -33,7 +33,7 @@ def main():
     con = sqlite3.connect(DB_NAME, isolation_level=None)
     con.execute('PRAGMA journal_mode = WAL;')
     create_table(con)
-    faker(con, count=10_000_000)
+    faker(con, count=1_000_000)
 
 
 if __name__ == '__main__':
